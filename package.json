@@ -1,0 +1,27 @@
+{
+  "name": "laboratorio",
+  "version": "0.0.1",
+  "description": "Laboratorio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RayadoxAV/Hackathon.git"
+  },
+  "devDependencies": {
+    "electron": "^19.1.0",
+    "electron-reload": "^2.0.0-alpha.1"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.4"
+  },
+  "author": "Equipo dinamita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RayadoxAV/Hackathon/issues"
+  },
+  "homepage": "https://github.com/RayadoxAV/Hackathon#readme"
+}
