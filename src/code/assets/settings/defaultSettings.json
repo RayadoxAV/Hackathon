@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "version": 1
+  },
+  "settings": [
+    {
+      "name": "general",
+      "displayName": "$general",
+      "description": "$generalDescription",
+      "settings": [
+        {
+          "name": "selectedLanguage",
+          "displayName": "$selectedLanguage",
+          "description": "$selectedLanguageDescription",
+          "value": "es",
+          "type": "list-gen"
+        }
+      ]
+    },
+    {
+      "name": "appearance",
+      "displayName": "$appearance",
+      "description": "$appearanceDescription",
+      "settings": [
+        {
+          "name": "selectedTheme",
+          "displayName": "$selectedTheme",
+          "description": "$selectedThemeDescription",
+          "value": "light",
+          "type": "list-gen"
+        }
+      ]
+    },
+    {
+      "name": "debug",
+      "displayName": "Debug",
+      "description": "All the settings used to debug this piece of sofware. Modify at your own risk!",
+      "settings": [
+        {
+          "name": "forceAssetReload",
+          "displayName": "Force asset reload",
+          "description": "",
+          "value": true,
+          "type": "boolean"
+        }
+      ]
+    }
+  ]
+}

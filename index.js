@@ -8,14 +8,20 @@ require('electron-reload')(__dirname, {
 });
 
 function createWindow () {
-  const win = new BrowserWindow({
+  const mainWindow = new BrowserWindow({
+    title: 'SAUC',
     width: 800,
     height: 600,
     webPreferences: {
+      nodeIntegration: true,
+      nodeIntegrationInWorker: true,
+      contextIsolation: false
     }
   });
+  remoteMain.enable(mainWindow.webContents);
+  mainWindow.setMenu(null);
 
-  win.loadFile('./src/index.html');
+  mainWindow.loadFile('./src/index.html');
 }
 
 app.whenReady().then(() => {
