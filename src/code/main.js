@@ -42,7 +42,7 @@ async function init() {
   const container = new Container();
   const mainContainer = new MainContainer({ side: navigationRail, center: container }, 'body');
 
-  container.setComponent(userMenu);
+  container.setComponent(devicesMenu);
 
   eventEmitter.emit('ready');
   eventEmitter.on('changeContainer', (args) => {
@@ -62,13 +62,11 @@ async function init() {
       }
 
       case 'settings': {
-        console.log('asa');
         container.setComponent(settingsMenu);
         break;
       }
 
       case 'home': {
-        console.log('asa');
         container.setComponent(homeMenu);
         break;
       }

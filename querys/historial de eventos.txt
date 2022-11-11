@@ -1,0 +1,23 @@
+//Historial de eventos 
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "AcsEventCond": {
+    "searchID": "123",
+    "searchResultPosition": 0,
+    "maxResults": 30
+  }
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("http://192.168.0.254:80/ISAPI/AccessControl/AcsEvent?format=json&devIndex=4CE60891-35C2-4DE3-B2E1-8A713EFBE911", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));

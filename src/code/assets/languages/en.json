@@ -12,6 +12,19 @@
     "selectedLanguage": "Selected language",
     "selectedLanguageDescription": "The language to use throughout the application.",
     "selectedTheme": "Selected theme",
-    "selectedThemeDescription": "The theme to style the graphical user interface of the application"
+    "selectedThemeDescription": "The theme to style the graphical user interface of the application",
+    "add": "Add",
+    "name": "Name",
+    "status": "Status",
+    "actions": "Actions",
+    "online": "Online",
+    "offline": "Offline",
+    "password": "Password",
+    "submit": "Submit",
+    "deleteMessage": "Are you sure you want to delete?",
+    "yes": "Yes",
+    "no": "No",
+    "cancel": "Cancel",
+    "update": "Update"
   }
 }

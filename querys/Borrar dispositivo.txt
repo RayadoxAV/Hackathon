@@ -1,3 +1,7 @@
 //QUERY borrar dispositivo
 
-https://www.getpostman.com/collections/d742948567402c8306ba
+{
+/*Dentro de los corchetes va el id unico del aparato de reconocimiento facial*/
+"DevIndexList": ["171E9B59-BB8F-489B-BEAC-3067B266FAFD"]
+
+}

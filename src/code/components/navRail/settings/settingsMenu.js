@@ -43,7 +43,6 @@ class settingsMenu {
     for (let i = 0; i < mainSetting.settings.length; i++) {
       const setting = mainSetting.settings[i];
       contentHTML += `<span class="setting-title">${window.lang[setting.name]}<span>`;
-      console.log(setting);
       contentHTML += `<p class="setting-description">${window.lang[setting.description.split('$')[1]]}</p>`
 
       switch (setting.type) {
@@ -55,7 +54,6 @@ class settingsMenu {
       }
     }
 
-    console.log(contentHTML);
     return contentHTML;
   }
 

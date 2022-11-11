@@ -1,0 +1,16 @@
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "text/plain");
+
+var raw = "{\r\n    \"DeviceInfo\": {\r\n        \"devIndex\": \"BBCDDCD2-35FF-4584-8C79-7831289B78E2\",\r\n        \"protocolType\": \"ehomeV5\",\r\n        \"EhomeParams\": {\r\n\r\n//ESTE ES EL ID DEL DISPOSITIVO \r\n            \"EhomeID\": \"A0001\",\r\n//ESTA ES LA CONTRASEÑA DEL DISPO\r\n            \"EhomeKey\": \"A1B2C3D4\"\r\n        },\r\n\r\n//AQUI SE MODIFICA EL NOMBRE DEL DISPOSITIVO \r\n        \"devName\": \"A0001\"\r\n    }\r\n}";
+
+var requestOptions = {
+  method: 'PUT',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("http://192.168.0.254:80/ISAPI/ContentMgmt/DeviceMgmt/modDevice?format=json", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));

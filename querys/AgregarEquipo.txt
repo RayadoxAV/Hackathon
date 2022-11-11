@@ -1,25 +1,16 @@
-{
- "DeviceInList": [{
- "Device": "Facial3" /*Nombre del equipo (parametro) */{
- "protocolType": "ISAPI",
-/*required, string, protocol type: "ehomeV5"-ISUP 5.0, "ISAPI" (Intelligent Security API)*/
- ,
- "ISAPIParams":{
-/*it is valid when the value of protocolType is "ISAPI"*/
- "addressingFormatType": "IPV4Address",
-/*optional string, address type: "IPV4Address" (IPv4 address)*/
- "address":"192.168.0.202" /*I del equipo (parametro) */,
-/*required, string, address; The address format depends on the value of addressingFormatType*/
- "portNo": 7661 /*Puerto del equipo (parametro) */ ,
-/*required, int, device port number; value range: [1,65535]*/
- "userName": "admin" ,
-/*required, string, user name; up to 32 characters are allowed*/
- "password": "A1B2C3D4" /*Contraseña del equipo (parametro) */
-/*required, string, password*/
- },
- "devType": "AccessControl" /*Tipo de equipo (parametro) */
-/*required, string, device type: "AccessControl" (access control device)*/
- }
- }
- ]
-}
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = "{\r\n    \"DeviceInList\": [\r\n        {\r\n            \"Device\": {\r\n                \"protocolType\": \"ehomeV5\",\r\n                /*required, string, protocol type: \"ehomeV5\"-ISUP 5.0, \"ISAPI\" (Intelligent Security API)*/\r\n                \"EhomeParams\": {\r\n                    /*it is valid when the value of protocolType is \"ehomeV5\"*/\r\n                    \"EhomeID\": \"A0001\",\r\n                    /*required, string, ISUP (Intelligent Security Uplink Protocol) ID; Up to 31 characters are allowed*/\r\n                    \"EhomeKey\": \"A1B2C3D4\"\r\n                    /*dependent, string, it is valid only when protocolType is \"ehomeV5\", and the maximum key length is 32 bytes*/\r\n                },\r\n                \"devType\": \"AccessControl\"\r\n                /*required, string, device type: \"AccessControl\" (access control device)*/\r\n            }\r\n        }\r\n    ]\r\n}";
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("http://192.168.0.254/ISAPI/ContentMgmt/DeviceMgmt/addDevice?format=json&devIndex=", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));

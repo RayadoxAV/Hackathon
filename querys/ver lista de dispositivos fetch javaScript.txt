@@ -1,0 +1,21 @@
+////ver elementos 
+
+
+
+
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = "\r\n//ver lista de dispositivos \r\n\r\n{\r\n \"SearchDescription\": {\r\n  \"position\": 0 , \r\n /*required, int, index, which starts from 0*/\r\n \"maxResult\": 100 /*Si le colocas 1 solo te da el especifico */\r\n /*required, int, the maximum number of searched results in a single search*/\r\n }\r\n }";
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("http://192.168.0.254/ISAPI/ContentMgmt/DeviceMgmt/deviceList?format=json\n", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));

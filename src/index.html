@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" >
     <link rel="stylesheet" href="./code/assets/styles/theme.css">
     <link rel="stylesheet" href="./code/assets/styles/index.css">
     <!-- <link href="./code/assets/styles/roboto.css" rel="stylesheet"> -->
@@ -13,5 +13,6 @@
   <body id="body" class="surface">
     
   </body>
+  <script src="./code/static/digest.js"></script>
   <script src="./code/main.js" type="module"></script>
 </html>

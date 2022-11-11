@@ -1,0 +1,12 @@
+var postData{
+	address: '123 main st.'
+}
+//El cuerpo
+
+var postReq = new digestAuthRequest('POST', url, 'username', 'password');
+
+postReq.request(funcion(data){
+
+}, function(errorCode)){
+
+},postData);

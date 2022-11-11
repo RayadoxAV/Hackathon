@@ -1,0 +1,16 @@
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "text/plain");
+
+var raw = "{\r\n\r\n//ver la cantidad de personas que hay agregadas \r\n\r\n    \"UserInfoSearchCond\": {\r\n        \"searchID\": \"72E5EC61-AE1F-46CC-8F7E-DD272C1F8668\",\r\n        \"searchResultPosition\": 0,\r\n        \"maxResults\": 30\r\n    }\r\n}";
+
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("http://192.168.0.254/ISAPI/AccessControl/UserInfo/Count?format=json&devIndex=72E5EC61-AE1F-46CC-8F7E-DD272C1F8668", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));

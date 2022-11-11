@@ -1,0 +1,18 @@
+//editar Informacion del usuario
+
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = "{\r\n    \"UserInfo\": {\r\n        \"employeeNo\": \"123456\",\r\n   \r\n//debemos de poner el nombre nuevo que le queremos dar al usuario\r\n        \"name\": \"JESUS FIERRO\",\r\n        //debemos poner el nuevo valor que le queremos dar al usuario(normal, visitor, blackList)\r\n        \"UserType\": \"blackList\",\r\n        \"Valid\": {\r\n            \"beginTime\": \"2017-08-01T17:30:08\",\r\n            \"endTime\": \"2027-08-01T17:30:08\"\r\n        }\r\n    }\r\n}";
+
+var requestOptions = {
+  method: 'PUT',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("http://192.168.0.254/ISAPI/AccessControl/UserInfo/Modify?format=json&devIndex=72E5EC61-AE1F-46CC-8F7E-DD272C1F8668", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));

@@ -12,6 +12,19 @@
     "selectedLanguage": "Selected language",
     "selectedLanguageDescription": "El lenguaje seleccionador para utilizar en la aplicación",
     "selectedTheme": "Tema seleccionado",
-    "selectedThemeDescription": "El tema para mostar a lo largo de la aplicación"
+    "selectedThemeDescription": "El tema para mostar a lo largo de la aplicación",
+    "add": "Agregar",
+    "name": "Nombre",
+    "status": "Estado",
+    "actions": "Acciones",
+    "online": "En línea",
+    "offline": "Desactivado",
+    "password": "Contraseña",
+    "submit": "Enviar",
+    "deleteMessage": "¿Seguro que desea borrar?",
+    "yes": "Si",
+    "no": "No",
+    "cancel": "Cancelar",
+    "update": "Actualizar"
   }
 }

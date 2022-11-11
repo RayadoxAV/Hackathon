@@ -1,0 +1,28 @@
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "UserInfo": [
+    {
+      "employeeNo": "123456",
+      "name": "test",
+      "userType": "normal",
+      "Valid": {
+        "beginTime": "2017-01-01T00:00:00",
+        "endTime": "2027-12-31T23:59:59"
+      }
+    }
+  ]
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("http://192.168.0.254:80/ISAPI/AccessControl/UserInfo/Record?format=json&devIndex=BBCDDCD2-35FF-4584-8C79-7831289B78E2", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));

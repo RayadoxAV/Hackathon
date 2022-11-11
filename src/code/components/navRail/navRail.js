@@ -5,7 +5,7 @@ class NavigationRail {
   html = {
     win32: `<div class="navigation-rail surface" id="navigation-rail">
     <span class="time label-medium">
-      ${new Date().toLocaleTimeString()}
+     
     </span>
     <div>
       <div class="item" target-container="home">
@@ -65,6 +65,16 @@ class NavigationRail {
         
       }
     });
+    this.updateTime();
+    
+    setInterval(() => {
+      this.updateTime();
+    }, 1000);
+  }
+
+  updateTime() {
+    const time = new Date().toLocaleTimeString();
+    this.element.querySelector('.time').innerHTML = time;
   }
 }
 
