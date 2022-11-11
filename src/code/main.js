@@ -9,8 +9,9 @@ import MainContainer from './components/mainContainer/mainContainer.js';
 import Container from './components/container/container.js';
 import Users from './components/navRail/user/userMenu.js'
 import Control from './components/navRail/control/controlMenu.js'
-import Devices from './components/navRail/user/userMenu.js'
+import Devices from './components/navRail/devices/devicesMenu.js'
 import Settings from './components/navRail/settings/settingsMenu.js'
+import Home from './components/navRail/home/home.js'
 import LanguageManager from './languages/languageManager.js';
 
 async function init() {
@@ -35,6 +36,7 @@ async function init() {
   const controlMenu = new Control();
   const devicesMenu = new Devices();
   const settingsMenu = new Settings();
+  const homeMenu = new Home();
 
   const navigationRail = new NavigationRail({user:userMenu,control:controlMenu,settings:settingsMenu,devices:devicesMenu},'main-container');
   const container = new Container();
@@ -62,6 +64,12 @@ async function init() {
       case 'settings': {
         console.log('asa');
         container.setComponent(settingsMenu);
+        break;
+      }
+
+      case 'home': {
+        console.log('asa');
+        container.setComponent(homeMenu);
         break;
       }
 

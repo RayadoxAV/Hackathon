@@ -5,22 +5,24 @@ class usersMenu {
     html = {
         win32: `<div class="cont">
                     <span class="header">Usuarios</span>
-                    <span data-item="create-user" class="item" id="create-user">
+                    <div class="user-grid">
+                        <span data-item="create-user" class="item" id="create-user">
                         <p>Agregar Usuario</p>
                         <img src="">imagen</img>
-                    </span>
-                    <span data-item="update-set" class="item" id="update-user">
-                        <p>Modificar Usuario</p>
-                        <img src="">imagen</img>
-                    </span>
-                    <span data-item="delete-user" class="item" id="delete-user">
-                        <p>Eliminar Usuario</p>
-                        <img src="">imagen</img>
-                    </span>
-                    <span data-item="read-user" class="item" id="read-user">
-                        <p>Información de usuario</p>
-                        <img src="">imagen</img>
-                    </span>
+                        </span>
+                        <span data-item="update-set" class="item" id="update-user">
+                            <p>Modificar Usuario</p>
+                            <img src="">imagen</img>
+                        </span>
+                        <span data-item="delete-user" class="item" id="delete-user">
+                            <p>Eliminar Usuario</p>
+                            <img src="">imagen</img>
+                        </span>
+                        <span data-item="read-user" class="item" id="read-user">
+                            <p>Ver Usuario</p>
+                            <img src="">imagen</img>
+                        </span>
+                    </div>
                 </div>`
     }
     
