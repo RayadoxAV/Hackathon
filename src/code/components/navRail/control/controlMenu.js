@@ -2,24 +2,27 @@ import Util from '../../../util/util.js';
 
 class controlMenu {
     html = {
-        win32: `<div class="menu" id="settings-menu">
-                    <span data-item="create" class="item" id="create-devices">
-                        <img src="">imagen</img>
-                        <h3>Agregar dispositivo</h3>
-                    </span>
-                    <span data-item="delete" class="item" id="delete-devices">
-                        <img src="">imagen</img>
-                        <h3>Borrar dispositivo</h3>
-                    </span>
-                    <span data-item="read" class="item" id="read-devices">
-                        <img src="">imagen</img>
-                        <h3>Ver dispositivos</h3>
-                    </span>
-                    <span data-item="update" class="item" id="update-devices">
-                        <img src="">imagen</img>
-                        <h3>Modificar dispositivos</h3>
-                    </span>
-                </div>`
+        win32: `<div class="cont">
+        <span class="header">Control</span>
+        <div class="user-grid">
+            <span data-item="create-user" class="item" id="create-user">
+            <p>Agregar Usuario</p>
+            <img src="">imagen</img>
+            </span>
+            <span data-item="update-set" class="item" id="update-user">
+                <p>Modificar Usuario</p>
+                <img src="">imagen</img>
+            </span>
+            <span data-item="delete-user" class="item" id="delete-user">
+                <p>Eliminar Usuario</p>
+                <img src="">imagen</img>
+            </span>
+            <span data-item="read-user" class="item" id="read-user">
+                <p>Ver Usuario</p>
+                <img src="">imagen</img>
+            </span>
+        </div>
+    </div>`
     }
     
     constructor() {
