@@ -1,0 +1,17 @@
+{
+  "name": "en",
+  "displayName": "English",
+  "words": {
+    "home": "Home",
+    "users": "Users",
+    "control": "Control",
+    "devices": "Devices",
+    "settings": "Settings",
+    "general": "General",
+    "appearance": "Appearance",
+    "selectedLanguage": "Selected language",
+    "selectedLanguageDescription": "The language to use throughout the application.",
+    "selectedTheme": "Selected theme",
+    "selectedThemeDescription": "The theme to style the graphical user interface of the application"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "es",
+  "displayName": "Spanish",
+  "words": {
+    "home": "Inicio",
+    "users": "Usuarios",
+    "control": "Control",
+    "devices": "Dispositivos",
+    "settings": "Opciones",
+    "general": "General",
+    "appearance": "Apariencia",
+    "selectedLanguage": "Selected language",
+    "selectedLanguageDescription": "El lenguaje seleccionador para utilizar en la aplicación",
+    "selectedTheme": "Tema seleccionado",
+    "selectedThemeDescription": "El tema para mostar a lo largo de la aplicación"
+  }
+}

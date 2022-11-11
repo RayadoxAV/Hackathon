@@ -1,3 +1,4 @@
+/*Importa las ventanas de electron y los componentes necesarios para la ejecución*/
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const remoteMain = require('@electron/remote/main');
@@ -19,8 +20,8 @@ function createWindow () {
     }
   });
   remoteMain.enable(mainWindow.webContents);
-  mainWindow.setMenu(null);
 
+  // mainWindow.setMenu(null);
   mainWindow.loadFile('./src/index.html');
 }
 

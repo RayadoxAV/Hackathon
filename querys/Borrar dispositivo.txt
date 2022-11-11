@@ -1,0 +1,3 @@
+//QUERY borrar dispositivo
+
+https://www.getpostman.com/collections/d742948567402c8306ba

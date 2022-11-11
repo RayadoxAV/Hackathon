@@ -21,3 +21,5 @@ class Util {
     return rems * parseFloat(getComputedStyle(document.documentElement).fontSize); 
   }
 }
+
+export default Util;

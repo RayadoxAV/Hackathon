@@ -1,0 +1,10 @@
+//ver lista de dispositivos 
+
+{
+ "SearchDescription": {
+  "position": 0 , 
+ /*required, int, index, which starts from 0*/
+ "maxResult": 100 /*Si le colocas 1 solo te da el especifico */
+ /*required, int, the maximum number of searched results in a single search*/
+ }
+ }
